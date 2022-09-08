@@ -53,11 +53,11 @@ export default {
       lang: 'en',
     },
   },
-  generate: {
-    exclude: [
-      /^\/blog/
-    ]
-  },
+  // generate: {
+  //   exclude: [
+  //     /^\/blog/
+  //   ]
+  // },
   // Content module configuration: https://go.nuxtjs.dev/config-content
   content: {},
 
