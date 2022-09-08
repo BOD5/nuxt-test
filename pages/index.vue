@@ -1,14 +1,24 @@
 <template>
   <ul>
-    <li><nuxt-link to="/blog/blog-post-1">Blog Post 1</nuxt-link></li>
-    <li><nuxt-link to="/blog/blog-post-2">Blog Post 2</nuxt-link></li>
-    <li><nuxt-link to="/blog/blog-post-3">Blog Post 3</nuxt-link></li>
-    <li><nuxt-link to="/blog/blog-post-4">Blog Post 4</nuxt-link></li>
+    <li v-for="post of posts" :key="post.id"><nuxt-link :to="`/blog/${post.id}`">{{post.title}}</nuxt-link></li>
   </ul>
 </template>
 
 <script>
 export default {
   name: 'IndexPage',
+  async asyncData({ params, redirect }) {
+    const posts = await fetch(
+      'https://jsonplaceholder.typicode.com/posts/'
+    ).then((res) => res.json())
+
+    if (posts) {
+      return {
+        posts
+      }
+    } else {
+      redirect('/')
+    }
+  }
 }
 </script>
