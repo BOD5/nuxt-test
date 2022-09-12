@@ -1,6 +1,6 @@
 <template>
   <ul>
-    <li v-for="post of posts" :key="post.id"><nuxt-link :to="`/blog/${post.id}`">{{post.title}}</nuxt-link></li>
+    <li v-for="post of posts" :key="post.id"><nuxt-link :to="`/blog/${post.id}`" class="link">{{post.title}}</nuxt-link></li>
   </ul>
 </template>
 

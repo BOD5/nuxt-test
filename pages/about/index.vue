@@ -1,6 +1,6 @@
 <!-- eslint-disable vue/multi-word-component-names -->
 <template>
-  <div>some about page</div>
+  <div>Nuxt text Application</div>
 </template>
 
 <script>

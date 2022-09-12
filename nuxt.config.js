@@ -18,6 +18,12 @@ export default {
     '@/assets/css/main.css',
   ],
 
+  styleResources: {
+    scss: [
+        '@/assets/scss/index.scss',
+    ]
+  },
+
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
 
@@ -39,6 +45,7 @@ export default {
     '@nuxtjs/pwa',
     // https://go.nuxtjs.dev/content
     '@nuxt/content',
+    '@nuxtjs/style-resources',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios

@@ -1,0 +1,19 @@
+.link {
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0px;
+    left: 50%;
+    width: 0px;
+    height: 2px;
+    background-color: black;
+    transition: width 0.5s, left 0.5s;
+  }
+  &:hover {
+    &::after {
+      left: 0px;
+      width: 100%;
+    }
+  }
+}
